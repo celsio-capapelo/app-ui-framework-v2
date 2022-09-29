@@ -1,0 +1,14 @@
+{
+  "name": "APP UI Framework",
+  "version": "1.0.0",
+  "description": "Reusable UI",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass scss/style.scss css/style.css -w"
+  },
+  "author": "Célsio Capapelo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

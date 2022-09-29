@@ -1,0 +1,30 @@
+// Temporary (DEV ONLY)
+.box {
+  background-color: gold !important;
+}
+
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  // outline: none;
+  // box-shadow: 0 0 0 0.4rem $color-primary-light-2;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}

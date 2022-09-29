@@ -1,0 +1,17 @@
+.c-input--search {
+  position: relative;
+
+  & input {
+    padding: .8rem;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  & .nav__icon.la-search {
+    position: absolute;
+    right: .8rem;
+    top: .4rem;
+    font-size: 2.4rem;
+  }
+}

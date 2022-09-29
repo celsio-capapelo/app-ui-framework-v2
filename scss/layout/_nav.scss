@@ -1,0 +1,22 @@
+.nav {
+  height: 6rem;
+  padding-right: .8rem;
+
+  & img {
+    height: 5rem;
+  }
+
+  &__icon {
+    font-size: 3.2rem;
+  }
+
+  &--fluid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+
+  & .company {
+    width: 25rem;
+  }
+}
+
