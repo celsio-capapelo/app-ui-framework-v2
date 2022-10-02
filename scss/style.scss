@@ -9,10 +9,10 @@
 @import "components/buttons";
 @import "components/links";
 @import "components/input";
+@import "components/sidebar-item";
+@import "components/dropdown";
 
 @import "layout/nav";
 @import "layout/sidebar";
 @import "layout/footer";
-
-@import "pages/app-layout-1";
-@import "pages/app-layout-2";
+@import "layout/pages";

@@ -4,77 +4,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App UI Framework</title>
+  <title>ELEMENTS &mdash; App UI Framework</title>
    <link
       rel="stylesheet"
       href="vendor/line-awesome-1.3.0/1.3.0/css/line-awesome.min.css"
     />
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
-<body class="page-1">
+<body class="lp--1">
   <!-- Sidebar START -->
-    <div class="page-1__1 sidebar">
+    <div class="lp--1__1 sidebar">
       <div class="company u-vertical-center">
-        <p class="company__name">App Layout 1</p>
+        <p class="company__name">App UI</p>
       </div>
       <ul class="sidebar__list">
-        <li class="sidebar__item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
+        <li class="sidebar__c-item">
+          <a href="app-ui.html" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-table"></i>
-            <span>Dashboard</span>
+            <span>App Layouts</span>
           </a>
         </li>
-        <li class="sidebar__item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
+        <li class="sidebar__c-item sidebar__c-item--active">
+          <a href="elements.html" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-chart-bar"></i>
-            <span>Statistics</span>
+            <span>Elements</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-wallet"></i>
-            <span>My Wallet</span>
+            <span>Lists</span>
           </a>
         </li>
-        <li class="sidebar__item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
+        <li class="sidebar__c-item">
+          <a href="forms.html" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-exchange-alt"></i>
-            <span>Transfers</span>
+            <span>Forms</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-envelope"></i>
-            <span>Message</span>
+            <span>Feedback</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-heart"></i>
-            <span>Favorite</span>
+            <span>Navigation</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-user"></i>
-            <span>Profile</span>
+            <span>Overlay</span>
           </a>
         </li>
       </ul>
       <ul class="sidebar__list--system">
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-question-circle"></i>
             <span>Support</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-cog"></i>
             <span>Settings</span>
           </a>
         </li>
-        <li class="sidebar__item">
+        <li class="sidebar__c-item">
           <a href="#" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-sign-out-alt"></i>
             <span>Log out</span>
@@ -85,7 +86,7 @@
   <!-- Sidebar END -->
 
     <!-- Navigation START -->
-    <div class="page-1__2">
+    <div class="lp--1__2">
       <nav class="nav u-space-between u-vertical-center">
         <span class="nav__greeting">Hello, Lair 👋</span>
         <div class="u-vertical-center u-gap-s">
@@ -101,10 +102,30 @@
     <!-- Sidebar END -->
 
     <!-- Main content START -->
-    <div class="page-1__3">
-      <p>MAIN CONTENT</p> 
-      <a href="index.html">Dashboard</a>
-      <a href="app-layout-2.html">App Layout 2</a>
+    <div class="lp--1__3">
+      <div>
+        <!-- <h1>FORMS &mdash; App UI Framework</h1> -->
+        <h2 class="heading--2">Input Groups</h2>
+        
+        <p>Input with inline leading add-on and trailing dropdown</p>
+        <div class="container--btn u-border">
+            <div class="input-group--addon-dropdown">
+              <label for="price">Price</label>
+              <div class="u-vertical-center">
+                <div class="u-vertical-center">
+                  <span class="input-group--addon-dropdown__symbol">$</span>
+                  <input type="text" placeholder="0.00" id="price">
+                </div>
+                <select name="currencies" class="currencies">
+                  <option value="usd">USD</option>
+                  <option value="eur">EUR</option>
+                  <option value="aoa">AOA</option>
+                </select>
+              </div>
+            </div>
+        </div>
+       
+      </div>
     </div>
     <!-- Main content END -->
 </body>
