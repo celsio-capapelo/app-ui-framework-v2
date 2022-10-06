@@ -52,38 +52,32 @@ dropdownCollection.forEach(dropdown => {
 // Select Menus
 
 // a) Functions
-const toggleVisibility = (element) => 
-  // getComputedStyle(element).display === "none" 
-  //   ? element.style.display = "block"
-  //   : element.style.display = "none";
-  element.classList.contains('select__list--hidden')
-    ? element.classList.remove('select__list--hidden')
-    : element.classList.add('select__list--hidden')
+const toggleVisibility = (element) =>
+  element.classList.contains("select__list--hidden")
+    ? element.classList.remove("select__list--hidden")
+    : element.classList.add("select__list--hidden");
 
 // b) Selections
-
 const selectNativeCollection =
   document.getElementsByClassName("select--native");
 const selectListCollection =
   document.getElementsByClassName("select__list");
 const selectActiveCollection =
-  document.getElementsByClassName("select--collapsed");
-Array.prototype.forEach.call(selectNativeCollection, (s, i) => {
-  state.selects.push({
-    id: i,
-    isOpenedNextList: false,
-  });
+  document.getElementsByClassName("select--active");
 
+Array.prototype.forEach.call(selectNativeCollection, (s, i) => {
   // 1) Insert selectActive and selectList elements
   s.insertAdjacentHTML(
     "beforebegin",
     `
-    <div class="select--collapsed u-vertical-center u-gap-s">
-      <img class="u-circle" src="images/profile.png" alt="Item image">  
-      <span></span>
-      <i class="sidebar__icon las la-angle-right"></i>
+    <div class="select--container u-border">
+      <div class="select--active u-vertical-center u-gap-s">
+        <img class="u-circle" src="images/profile.png" alt="Item image">  
+        <span class="u-vertical-center"></span>
+        <i class="dropdown__icon las la-angle-right"></i>
+      </div>
+      <div class="select__list select__list--hidden u-border"></div> 
     </div>
-    <div class="select__list select__list--hidden u-border"></div> 
   `
   );
 
@@ -99,13 +93,13 @@ Array.prototype.forEach.call(selectNativeCollection, (s, i) => {
       (html = html.concat(
         `<div class="select__item u-vertical-center u-gap-s">
           <img class="u-circle" src="images/profile.png" alt="Item image"> 
-          <span>${t}</span>
-          <i class="sidebar__icon"></i>
+          <span class="u-vertical-center">${t}</span>
+          <i class="dropdown__icon"></i>
         </div>`
       ))
   );
 
-  const selectList = s.previousElementSibling;
+  const selectList = s.previousElementSibling.querySelector('.select__list');
   selectList.innerHTML = html;
 
   // 3) Add initial HTML to selectActive's span
@@ -118,24 +112,26 @@ Array.prototype.forEach.call(selectNativeCollection, (s, i) => {
   selectItemsCollection.forEach((item, index, arr) => {
     item.addEventListener("click", () => {
       // Add select--active class on clicked item
-      // TODO: Remove select--active on every item & 'sidebar__icon las la-check' on every icon
-      console.log(arr);
       arr.forEach((p) => {
         p.classList.remove("select--active");
-        p.querySelector('.sidebar__icon').classList.remove('las', 'la-check');
+        p.querySelector('.dropdown__icon').classList.remove('las', 'la-check');
       });
       item.classList.add("select--active");
-      item.querySelector(".sidebar__icon").classList.add("las", "la-check");
-      console.log(item.querySelector(".sidebar__icon"));
-      // debugger;
+      item.querySelector(".dropdown__icon").classList.add("las", "la-check");
 
       // Update selectActive's InnerHTML
-      selectActive.innerHTML = "";
-      selectActive.innerHTML = `
+      selectActive.removeChild(selectActive.querySelector("img"));
+      selectActive.removeChild(selectActive.querySelector("span"));
+      selectActive.insertAdjacentHTML(
+        "afterbegin",
+        `
         <img class="u-circle" src="images/profile.png" alt="Item image">  
-        <span>${item.querySelector("span").innerHTML}</span>
-        <i class="sidebar__icon las la-angle-right"></i>
-      `;
+        <span class="u-vertical-center">${item.querySelector("span").innerHTML}</span>
+      `
+      );
+      selectActive
+        .querySelector("i")
+        .classList.remove("dropdown__icon--rotate");
 
       // Update selectedOption on selectNative
       s.options.selectedIndex = index;
@@ -145,19 +141,15 @@ Array.prototype.forEach.call(selectNativeCollection, (s, i) => {
     });
   });
 
-  // 5) Toggle selectList Visibility when selectActive is clicked
+  // 5) Rotate icon when selectActive is clicked
   selectActive.addEventListener("click", (e) => {
     const icon = e.target.parentNode.querySelector("i");
-    icon.classList.contains("la-angle-right")
-      ? icon.classList.replace("la-angle-right", "la-angle-down")
-      : icon.classList.replace("la-angle-down", "la-angle-right");
+    icon.classList.contains("dropdown__icon--rotate")
+      ? icon.classList.remove("dropdown__icon--rotate")
+      : icon.classList.add("dropdown__icon--rotate");
     toggleVisibility(e.target.parentNode.nextElementSibling);
   });
 });
-
-
-
-
 
 console.log("SCRIPT_END");
 

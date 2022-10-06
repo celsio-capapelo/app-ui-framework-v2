@@ -110,11 +110,14 @@ body {
   padding: .8rem;
   border-radius: .4rem;
   background-color: #fff; }
+  .container--forms .mockup,
+  .container--forms .select--container {
+    width: 25rem;
+    position: relative;
+    margin-bottom: 1.2rem; }
   .container--forms > p {
     margin-bottom: 1.6rem;
     font-size: 1.4rem; }
-  .container--forms > div > div[class^='select']:not(:nth-last-of-type(odd)) {
-    border: 1px dotted greenyellow; }
 
 .c-input--search {
   position: relative; }
@@ -154,30 +157,42 @@ body {
     .input-group--addon-dropdown select:focus, .input-group--addon-dropdown select:active {
       outline: none; }
 
-.select__active {
-  width: 25rem;
-  background-color: coral;
-  margin-bottom: .8rem; }
+.select--container {
+  position: relative; }
 
 .select__list {
   width: 25rem;
   margin-bottom: 1.6rem;
+  position: absolute;
+  left: -.1rem;
+  top: 4.9rem;
+  z-index: 10;
   opacity: 1;
+  visibility: visible;
   transition: all .5s ease-in-out; }
   .select__list--hidden {
     opacity: 0;
-    height: 0; }
+    visibility: hidden; }
 
-.select__item, .select--collapsed, .select--expanded {
+.select__item, .select--active {
   cursor: pointer;
-  width: 25rem;
-  padding-inline: .4rem; }
-  .select__item .select__item:hover, .select--collapsed .select__item:hover, .select--expanded .select__item:hover, .select__item .select--collapsed:hover, .select--collapsed .select--collapsed:hover, .select--expanded .select--collapsed:hover, .select__item .select--expanded:hover, .select--collapsed .select--expanded:hover, .select--expanded .select--expanded:hover {
-    background-color: mediumspringgreen; }
-  .select__item img, .select--collapsed img, .select--expanded img {
+  width: 24.8rem;
+  padding: .4rem;
+  align-content: stretch; }
+  .select__item:hover, .select--active:hover {
+    background-color: #f1f1f4;
+    color: #3c3b4a; }
+  .select__item img, .select--active img {
     height: 3.5rem; }
-  .select__item span, .select--collapsed span, .select--expanded span {
-    flex-grow: 1; }
+  .select__item span, .select--active span {
+    flex-grow: 1;
+    align-self: stretch; }
+  .select__item .dropdown__icon, .select--active .dropdown__icon {
+    font-size: 3.2rem;
+    color: #aeadbd;
+    transition: all .3s ease-in-out; }
+    .select__item .dropdown__icon--rotate, .select--active .dropdown__icon--rotate {
+      transform: rotate(90deg); }
 
 .select--native {
   display: none; }

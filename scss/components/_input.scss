@@ -7,23 +7,16 @@
   border-radius: .4rem;
   background-color: $color-white;
 
+  & .mockup,
+  .select--container {
+    width: 25rem;
+    position: relative;
+    margin-bottom: 1.2rem;
+  }
+
   & > p {
     margin-bottom: 1.6rem;
     font-size: 1.4rem;
-  }
-
-  & > div {
-    // margin-bottom: 4.8rem;
-
-    & > :not(button:last-child) {
-      // margin-right: 1.6rem;
-    }
-  }
-
-  & > div > div[class ^= 'select'] {
-    &:not(:nth-last-of-type(odd)) {
-      border: 1px dotted greenyellow;
-    }
   }
 }
 ////////////////////////////////////
@@ -88,7 +81,6 @@
 
       &:focus,
       &:active {
-        // border: 2px solid orangered;
         outline: none;
       }
     }
@@ -98,36 +90,49 @@
 /////////////////////////////////////
 // Select menus
 .select {
+  &--container {
+    position: relative;
+  }
+
   &__active {
-    width: 25rem;
-    background-color: coral;
-    margin-bottom: .8rem;
   }
 
   &__list {
     width: 25rem;
     margin-bottom: 1.6rem;
+
+    position: absolute;
+    left: -.1rem;
+    top: 4.9rem;
+    z-index: 10;
+    
+    // Animation
     opacity: 1;
-    // visibility: hidden;
-    // display: none;
+    visibility: visible;
     transition: all .5s ease-in-out;
 
     &--hidden {
+      // NO animation
+      // display: none;
+
+      // Animation
       opacity: 0;
-      // visibility: hidden;
-      height: 0;
+      visibility: hidden;
     }
   }
 
   &__item ,
-  &--collapsed,
-  &--expanded {
+  &--active {
+
     cursor: pointer;
-     width: 25rem;
-    padding-inline: .4rem;
-    &
+    width: 24.8rem;
+    padding: .4rem;
+
+    align-content: stretch;
+    
     &:hover {
-      background-color: mediumspringgreen;
+      background-color: $color-grey-lightest;
+      color: $color-grey-dark-2;
     }
 
     & img {
@@ -136,13 +141,18 @@
 
     & span {
       flex-grow: 1;
+      align-self: stretch;
     }
 
-    & i {
-
+    & .dropdown__icon {
+      font-size: 3.2rem;
+      color: $color-grey-light-2;
+      transition: all .3s ease-in-out;
+      &--rotate {
+        transform: rotate(90deg);
+      }
     }
   }
-
   &--native {
     display: none;
   }
