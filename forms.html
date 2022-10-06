@@ -25,7 +25,7 @@
             <span>App Layouts</span>
           </a>
         </li>
-        <li class="sidebar__c-item sidebar__c-item--active">
+        <li class="sidebar__c-item">
           <a href="elements.html" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-chart-bar"></i>
             <span>Elements</span>
@@ -37,7 +37,7 @@
             <span>Lists</span>
           </a>
         </li>
-        <li class="sidebar__c-item">
+        <li class="sidebar__c-item sidebar__c-item--active">
           <a href="forms.html" class="u-vertical-center u-gap-s sidebar__link">
             <i class="sidebar__icon las la-exchange-alt"></i>
             <span>Forms</span>
@@ -104,11 +104,10 @@
     <!-- Main content START -->
     <div class="lp--1__3">
       <div>
-        <!-- <h1>FORMS &mdash; App UI Framework</h1> -->
         <h2 class="heading--2">Input Groups</h2>
         
-        <p>Input with inline leading add-on and trailing dropdown</p>
-        <div class="container--btn u-border">
+        <div class="container--forms u-border">
+          <p>Input with inline leading <strong>add-on</strong> and trailing dropdown</p>
             <div class="input-group--addon-dropdown">
               <label for="price">Price</label>
               <div class="u-vertical-center">
@@ -126,7 +125,178 @@
         </div>
        
       </div>
+      <div>
+        <h2 class="heading--2">Select Menus</h2>
+        
+        <div class="container--forms u-border">
+          <p>Custom select with <strong>avatar</strong></p>
+          <!-- <div class="container--custom-select">
+            <select class="select--native" name="people" id="">
+              <option value="person-1">Tom Cook</option>
+              <option value="person-2">Wade Cooper</option>
+              <option value="person-3">Devon Webb</option>
+              <option value="person-4">Wilson Paton</option>
+            </select>
+          </div>
+          <div class="container--custom-select">
+            <select class="select--native" name="actions" id="">
+              <option value="action-1">Edit</option>
+              <option value="action-2">Duplicate</option>
+              <option value="action-3">Archive</option>
+              <option value="action-4">Move</option>
+              <option value="action-4">Share</option>
+              <option value="action-4">Add to favorites</option>
+              <option value="action-4">Delete</option>
+            </select>
+          </div> -->
+
+          
+          <select class="select--native" name="people" id="">
+            <option value="person-1">
+              <div class="select__item u-vertical-center u-gap-s">
+                Tom Cook
+              </div>
+            </option>
+
+            <option value="person-2">
+              <div class="select__item u-vertical-center u-gap-s">
+                Alice Watson
+              </div>
+            </option>
+            <option value="person-3">
+              <div class="select__item u-vertical-center u-gap-s">
+                Wade Cooper
+              </div></option>
+            <option value="person-4">
+              <div class="select__item u-vertical-center u-gap-s">
+                Wilson Paton
+              </div>
+            </option>
+          </select>
+
+          <select class="select--native" name="actions" id="">
+            <option value="action-1">
+              <div class="select__item u-vertical-center u-gap-s">
+                Edit
+              </div>
+            </option>
+            <option value="action-2">
+              <div class="select__item u-vertical-center u-gap-s">
+                Duplicate
+              </div>
+              </option>
+            <option value="action-3">
+              <div class="select__item u-vertical-center u-gap-s">
+                Archive
+              </div>
+              </option>
+            <option value="action-4"
+            <div class="select__item u-vertical-center u-gap-s">
+                Move
+              </div>
+            </option>
+            <option value="action-4">
+              <div class="select__item u-vertical-center u-gap-s">
+                Share
+              </div>
+              </option>
+            <option value="action-4">
+              <div class="select__item u-vertical-center u-gap-s">
+                Add to favorite
+              </div>
+            </option>
+            <option value="action-4">
+              <div class="select__item u-vertical-center u-gap-s">
+                Delete
+              </div>
+            </option>
+          </select>
+
+          <!--
+
+                <div class="select__list select__list--hidden u-border"><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Edit
+              
+            </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Duplicate
+              
+              </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Archive
+              
+              </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+                Move
+              
+            </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Share
+              
+              </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Add to favorite
+              
+            </span>
+          <i class="sidebar__icon"></i>
+        </div><div class="select__item u-vertical-center u-gap-s">
+          <img class="u-circle" src="images/profile.png" alt="Item image"> 
+          <span>
+              
+                Delete
+              
+            </span>
+          <i class="sidebar__icon"></i>
+        </div></div>
+          -->
+          <!-- <div>
+            <div class="select--collapsed u-vertical-center u-gap-s">
+              <img class="u-circle" src="images/profile.png" alt="Item image">  
+              <span>Lorem ipsum</span>
+              <i class="sidebar__icon las la-angle-right"></i>
+            </div>
+            <div class="select--expanded u-vertical-center u-gap-s">
+              <img class="u-circle" src="images/profile.png" alt="Item image">  
+              <span>Lorem ipsum</span>
+              <i class="sidebar__icon las la-angle-down"></i>
+            </div>
+            <div class="select__item u-vertical-center u-gap-s">
+              <img class="u-circle" src="images/profile.png" alt="Item image">  
+              <span>Lorem ipsum</span>
+              <i class=""></i>
+            </div>
+            <div class="select__item select--active u-vertical-center u-gap-s">
+              <img class="u-circle" src="images/profile.png" alt="Item image">  
+              <span>Lorem ipsum</span>
+              <i class="sidebar__icon las la-check"></i>
+            </div> -->
+            </div>
+        </div>
+      </div>
     </div>
     <!-- Main content END -->
 </body>
 </html>
+
