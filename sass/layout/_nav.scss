@@ -1,7 +1,14 @@
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 6rem;
-  padding-right: .8rem;
-  padding-left: .8rem;
+
+  & > div {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+  }
 
   & img {
     height: 5rem;
@@ -20,4 +27,3 @@
     width: 25rem;
   }
 }
-

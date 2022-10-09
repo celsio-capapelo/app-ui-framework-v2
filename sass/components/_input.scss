@@ -1,27 +1,8 @@
-////////////////////////////////////
-// Development only (TEMPORARY)
-.container--forms {
-  background-color: gold;
-  margin-top: 1.6rem;
-  padding: .8rem;
-  border-radius: .4rem;
-  background-color: $color-white;
 
-  & .mockup,
-  .select--container {
-    width: 25rem;
-    position: relative;
-    margin-bottom: 1.2rem;
-  }
-
-  & > p {
-    margin-bottom: 1.6rem;
-    font-size: 1.4rem;
-  }
-}
 ////////////////////////////////////
 // Inputs
-.c-input {
+
+.input {
   &--search {
     position: relative;
 

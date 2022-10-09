@@ -1,0 +1,44 @@
+.form {
+  &__group {
+    &--icon {
+      position: relative;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: .8rem;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    padding: .8rem;
+    border: 1px solid $color-grey-light-2;
+    
+    &:focus {
+      border: 1px solid $color-primary;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-grey-light-2;
+    }
+
+    &--icon {
+      padding-left: 3.6rem;
+    }
+  }
+
+  &__icon {
+    font-size: 3.2rem;
+    color: $color-grey-light-2;
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+  }
+
+  &__select {
+
+  }
+}

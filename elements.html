@@ -5,92 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ELEMENTS &mdash; App UI Framework</title>
-   <link
-      rel="stylesheet"
-      href="vendor/line-awesome-1.3.0/1.3.0/css/line-awesome.min.css"
-    />
+  <link
+    rel="stylesheet"
+    href="/vendor/icons/line-awesome-1.3.0/1.3.0/css/line-awesome.min.css"
+  />
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/script.js"></script>
 </head>
-<body class="lp--1">
+<body class="app--1 page--elements">
   <!-- Sidebar START -->
-    <div class="lp--1__1 sidebar">
-      <div class="company u-vertical-center">
+    <menu class="app--1__1 sidebar">
+      <div class="company">
         <p class="company__name">App UI</p>
       </div>
       <ul class="sidebar__list">
-        <li class="sidebar__c-item">
-          <a href="app-ui.html" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-file-code"></i>
-            <span>App Layouts</span>
+        <li class="sidebar__item">
+          <a href="/" class="sidebar__link">
+            <i class="sidebar__icon las la-table"></i>
+            <span>Dashboard</span>
           </a>
         </li>
-        <li class="sidebar__c-item sidebar__c-item--active">
-          <a href="elements.html" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-shapes"></i>
+        <li class="sidebar__item sidebar__item--active">
+          <a href="elements.html" class="sidebar__link">
+            <i class="sidebar__icon las la-cookie"></i>
             <span>Elements</span>
           </a>
         </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-tasks"></i>
-            <span>Lists</span>
+        <li class="sidebar__item">
+          <a href="components.html" class="sidebar__link">
+            <i class="sidebar__icon las la-shapes"></i>
+            <span>Components</span>
           </a>
         </li>
-        <li class="sidebar__c-item">
-          <a href="forms.html" class="u-vertical-center u-gap-s sidebar__link">
+        <li class="sidebar__item">
+          <a href="layouts.html" class="sidebar__link">
             <i class="sidebar__icon las la-file"></i>
-            <span>Forms</span>
-          </a>
-        </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-paper-plane"></i>
-            <span>Feedback</span>
-          </a>
-        </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-walking"></i>
-            <span>Navigation</span>
-          </a>
-        </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-images"></i>
-            <span>Overlay</span>
+            <span>Layouts</span>
           </a>
         </li>
       </ul>
-      <ul class="sidebar__list--system">
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-question-circle"></i>
-            <span>Support</span>
-          </a>
-        </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-cog"></i>
-            <span>Settings</span>
-          </a>
-        </li>
-        <li class="sidebar__c-item">
-          <a href="#" class="u-vertical-center u-gap-s sidebar__link">
-            <i class="sidebar__icon las la-sign-out-alt"></i>
-            <span>Log out</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    </menu>
   <!-- Sidebar END -->
 
-    <!-- Navigation START -->
-    <div class="lp--1__2">
-      <nav class="nav u-space-between u-vertical-center">
+  <!-- Navigation START -->
+  <div class="app--1__2">
+    <div class="u-container">
+      <nav class="nav">
         <span class="nav__greeting">Hello, Lair 👋</span>
-        <div class="u-vertical-center u-gap-s">
-          <div class="nav__search c-input--search">
+        <div class="">
+          <div class="nav__search input--search">
             <i class="nav__icon las la-search"></i>
             <input class="nav__input" type="text" placeholder="Search">
           </div>
@@ -99,136 +62,122 @@
         </div>
       </nav>
     </div>
-    <!-- Sidebar END -->
-
-    <!-- Main content START -->
-    <div class="lp--1__3">
-      <div>
-        <h1>ELEMENTS &mdash; App UI Framework</h1>
-
-        <div class="container--btn u-border">
-          <h2 class="heading--2">Buttons</h2>
-          <div>
-            <button class="btn btn--xs">Button text</button>
-            <button class="btn btn--s">Button text</button>
-            <button class="btn">Button text</button>
-            <button class="btn btn--l">Button text</button>
-            <button class="btn btn--xl">Button text</button>
-          </div>
-          <div>
-            <button class="btn btn--xs btn--trail-i">
-              <i class="las la-envelope"></i>
-              <span>Button text</span>
-            </button>
-            <button class="btn btn--s btn--trail-i">
-              <i class="las la-envelope"></i>
-              <span>Button text</span>
-            </button>
-            <button class="btn btn--trail-i">
-              <i class="las la-envelope"></i>
-              <span>Button text</span>
-            </button>
-            <button class="btn btn--l btn--trail-i">
-              <i class="las la-envelope"></i>
-              <span>Button text</span>
-            </button>
-            <button class="btn btn--xl btn--trail-i">
-              <i class="las la-envelope"></i>
-              <span>Button text</span>
-            </button>
-          </div>
-        </div>
-        <div class="container--dropdown u-border">
-          <h2 class="heading--2">Dropdowns</h2>
-          <div>
-            <p>Simple (Require JS)</p>
-            <div class="dropdown">
-              <div class="dropdown__trigger u-border">
-                <span class="dropdown__text">Options</span>
-                <i class="dropdown__icon las la-angle-right"></i>
-              </div>
-              <div class="dropdown__content dropdown__content--hidden u-border" method="" action="#">
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Account settings</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Support</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">License</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Sign out</a></div>
-              </div>
+  </div>
+  <!-- Main content START -->
+    <main class="app--1__3">
+        <!-- Buttons START -->
+        <section class="section">
+          <div class="u-container u-border">
+            <div>
+              <span class="subheading">Button</span>
+              <h2 class="heading--2"></h2>
+            </div>
+            <div class="">
+              <button class="btn btn--xs">Button text</button>
+              <button class="btn btn--s">Button text</button>
+              <button class="btn">Button text</button>
+              <button class="btn btn--l">Button text</button>
+              <button class="btn btn--xl">Button text</button>
+            </div>
+            <div class="">
+              <button class="btn btn--primary btn--border-radius btn--xs">Button text</button>
+              <button class="btn btn--primary btn--border-radius btn--s">Button text</button>
+              <button class="btn btn--primary btn--border-radius">Button text</button>
+              <button class="btn btn--primary btn--border-radius btn--l">Button text</button>
+              <button class="btn btn--primary btn--border-radius btn--xl">Button text</button>
+            </div>
+            <div class="">
+              <button class="btn btn--xs btn--trail-i">
+                <i class="las la-envelope"></i>
+                <span>Button text</span>
+              </button>
+              <button class="btn btn--s btn--trail-i">
+                <i class="las la-envelope"></i>
+                <span>Button text</span>
+              </button>
+              <button class="btn btn--trail-i">
+                <i class="las la-envelope"></i>
+                <span>Button text</span>
+              </button>
+              <button class="btn btn--l btn--trail-i">
+                <i class="las la-envelope"></i>
+                <span>Button text</span>
+              </button>
+              <button class="btn btn--xl btn--trail-i">
+                <i class="las la-envelope"></i>
+                <span>Button text</span>
+              </button>
             </div>
           </div>
+        </section>
+        <!-- Buttons END -->
+
+      <!-- Inputs START -->
+      <section class="section">
+        <div class="u-container u-border">
           <div>
-            <p>With dividers (Require JS)</p>
-            <div class="dropdown">
-              <div class="dropdown__trigger u-border">
-                <span class="dropdown__text">Options</span>
-                <i class="dropdown__icon las la-angle-right"></i>
-              </div>
-              <div class="dropdown__content dropdown__content--hidden u-border" method="" action="#">
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Edit</a></div>
-                <div class="dropdown__item u-dropdown-divider"><a class="dropdown__link" href="#">Duplicate</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Archive</a></div>
-                <div class="dropdown__item u-dropdown-divider"><a class="dropdown__link" href="#">Move</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Share</a></div>
-                <div class="dropdown__item u-dropdown-divider"><a class="dropdown__link" href="#">Add to favorites</a></div>
-                <div class="dropdown__item"><a class="dropdown__link" href="#">Delete</a></div>
-              </div>
-            </div>
+            <span class="subheading">Input</span>
+            <h2 class="heading--2"></h2>
           </div>
-          <div>
-            <p>With icons (Require JS)</p>
-            <div class="dropdown">
-              <div class="dropdown__trigger u-border">
-                <span class="dropdown__text">Options</span>
-                <i class="dropdown__icon las la-angle-right"></i>
-              </div>
-              <div class="dropdown__content dropdown__content--hidden u-border" method="" action="#">
-                <div class="dropdown__item">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-edit"></i>
-                    <span>Edit</span>
-                  </a>
-                </div>
-                <div class="dropdown__item u-dropdown-divider">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-copy"></i>
-                    <span>Duplicate</span>
-                  </a>
-                </div>
-                <div class="dropdown__item">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-archive"></i>
-                    <span>Archive</span>
-                  </a>
-                </div>
-                <div class="dropdown__item u-dropdown-divider">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-cut"></i>
-                    <span>Move</span>
-                  </a>
-                </div>
-                <div class="dropdown__item">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-file-code"></i
-                      ><span>Share</span>
-                    </a>
-                  </div>
-                <div class="dropdown__item u-dropdown-divider">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-heart"></i>
-                    <span>Add to favorites</span>
-                  </a>
-                </div>
-                <div class="dropdown__item">
-                  <a class="dropdown__link" href="#">
-                    <i class="sidebar__icon las la-trash"></i>
-                    <span>Delete</span>
-                  </a>
-                </div>
-              </div>
+          <div class="">
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input" type="text" placehder="Your name" id="name" />
+            </div>
+            <div class="form__group form__group--icon">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input form__input--icon" type="text" placeholder="Your name" id="name" />
+              <i class="form__icon las la-user"></i>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <!-- Inputs END -->
+
+      <!-- Textarea START -->
+      <section class="section">
+        <div class="u-container u-border">
+          <div>
+            <span class="subheading">Textarea</span>
+            <h2 class="heading--2"></h2>
+          </div>
+          <div class="">
+            <div class="form__group">
+              <label class="form__label" for="description">Name</label>
+              <textarea class="form__textarea" name="textarea" rows="10" cols="50" id="description">Add description here</textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Textarea END -->
+
+      <!-- Select START -->
+      <section class="section section--select">
+        <div class="u-container u-border">
+          <div>
+            <span class="subheading">Select</span>
+            <h2 class="heading--2"></h2>
+          </div>
+          <div class="">
+            <div>
+              <select class="form__select" name="choice">
+                <option class="form__option" value="first">First Value</option>
+                <option class="form__option" value="second" selected>Second Value</option>
+                <option class="form__option" value="third">Third Value</option>
+              </select>
+            </div>
+            <div>
+              <select class="form__select" name="choice"multiple>
+                <option class="form__option" value="first">First Value</option>
+                <option class="form__option" value="second" selected>Second Value</option>
+                <option class="form__option" value="third">Third Value</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Select END -->
+    </main>
     <!-- Main content END -->
 </body>
 </html>

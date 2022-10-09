@@ -1,0 +1,49 @@
+.sidebar {
+  display: grid;
+  align-items: start;
+  grid-template-rows: min-content 1fr min-content;
+  width: 25rem;
+
+  &--2-rows {
+    grid-template-rows: min-content min-content;
+    align-content: space-between
+  }
+  & .company {
+    align-self: center;
+    height: 6rem;
+  }
+
+  &__list {
+  }
+
+  &__link:link, 
+  &__link:visited {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    text-decoration: none;
+    padding: .8rem .8rem;
+    color: $color-grey;
+  }
+
+  &__link:hover, 
+  &__link:active {
+    
+    background-color: $color-grey-light-2;
+    color: $color-grey-dark-2;
+  }
+
+  &__list--system {
+  }
+
+  &__item {
+    &--active {
+      background-color: $color-primary--lightest;
+      border-right: 3px solid $color-primary--light-1
+    }
+  }
+
+  &__icon {
+    font-size: 3.2rem;
+  }
+}

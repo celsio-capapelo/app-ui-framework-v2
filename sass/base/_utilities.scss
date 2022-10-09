@@ -1,0 +1,27 @@
+.u-container {
+  margin-inline: 1.6rem !important;
+
+  & .subheading {
+    text-transform: uppercase !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    letter-spacing: .2rem !important;
+    color: $color-suport-2--light-1 !important;
+  }
+}
+
+.u-circle {
+  border-radius: 1000rem !important;
+}
+
+.u-border {
+  border: 1px solid rgba($color-grey-light-2, .5) !important;
+}
+
+.u-hr::after {
+  content: "" !important;
+  display: block !important;
+  background-color: rgba($color-grey-light-2, .25) !important;
+  height: 1px !important;
+}
+

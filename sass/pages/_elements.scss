@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 4.8rem;
+  
+  & > div {
+    background-color: $color-white;
+    padding: 2.4rem;
+
+    & > div:not(:first-child) {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.4rem;
+    }
+
+    & > div:not(:last-child) {
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &--select {
+   & > div div:nth-child(2) {
+      align-items: flex-start;
+    } 
+  }
+}
+
+main {
+  padding-top: 1.6rem;
+}
