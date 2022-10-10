@@ -38,7 +38,16 @@
     left: 0;
   }
 
-  &__select {
-
+  &__radio {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    outline: 3px $color-accent-1 solid;
+    outline-offset: 5px;
+    
+    &:checked {
+      background-color: $color-accent-1;
+    }
   }
 }
