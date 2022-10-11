@@ -14,7 +14,7 @@
   &__textarea,
   &__select {
     padding: .8rem;
-    border: 1px solid $color-grey-light-2;
+    border: 1px solid $color-grey--light-2;
     
     &:focus {
       border: 1px solid $color-primary;
@@ -22,7 +22,7 @@
     }
 
     &::placeholder {
-      color: $color-grey-light-2;
+      color: $color-grey--light-2;
     }
 
     &--icon {
@@ -32,7 +32,7 @@
 
   &__icon {
     font-size: 3.2rem;
-    color: $color-grey-light-2;
+    color: $color-grey--light-2;
     position: absolute;
     bottom: 4px;
     left: 0;

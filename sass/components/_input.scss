@@ -112,8 +112,8 @@
     align-content: stretch;
     
     &:hover {
-      background-color: $color-grey-lightest;
-      color: $color-grey-dark-2;
+      background-color: $color-grey--lightest;
+      color: $color-grey--dark-2;
     }
 
     & img {
@@ -127,7 +127,7 @@
 
     & .dropdown__icon {
       font-size: 3.2rem;
-      color: $color-grey-light-2;
+      color: $color-grey--light-2;
       transition: all .3s ease-in-out;
       &--rotate {
         transform: rotate(90deg);

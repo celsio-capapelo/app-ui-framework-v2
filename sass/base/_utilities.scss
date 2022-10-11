@@ -7,13 +7,13 @@
 }
 
 .u-border {
-  border: 1px solid rgba($color-grey-light-2, .5) !important;
+  border: 1px solid rgba($color-grey--light-2, .5) !important;
 }
 
 .u-hr::after {
   content: "" !important;
   display: block !important;
-  background-color: rgba($color-grey-light-2, .25) !important;
+  background-color: rgba($color-grey--light-2, .25) !important;
   height: 1px !important;
 }
 

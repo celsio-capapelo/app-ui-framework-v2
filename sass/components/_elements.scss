@@ -1,0 +1,30 @@
+.tag {
+    background-color: springgreen;
+    padding: .4rem 1.6rem;
+    font-size: 1.2rem;
+
+  &--primary {
+    background-color: $color-primary--light-4;
+    color: $color-primary--dark-2;
+  }
+  &--grey {
+    background-color: $color-grey--light-4;
+    color: $color-grey--dark-2;
+  }
+  &--accent-1 {
+    background-color: $color-accent-1--light-4;
+    color: $color-accent-1--dark-3;
+  }
+  &--accent-2 {
+    background-color: $color-accent-2--light-4;
+    color: $color-accent-2--dark-2;
+  }
+  &--accent-3 {
+    background-color: $color-accent-3--light-4;
+    color: $color-accent-3--dark-3;
+  }
+  &--accent-4 {
+    background-color: $color-accent-4--light-4;
+    color: $color-accent-4--dark-3;
+  }
+}
