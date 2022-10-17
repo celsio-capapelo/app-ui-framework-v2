@@ -1,0 +1,171 @@
+/////////////////////////////////////
+// Select menus
+// .select {
+//   &--container {
+//     position: relative;
+//   }
+
+//   &__active {
+//   }
+
+//   &__list {
+//     width: 25rem;
+//     margin-bottom: 1.6rem;
+
+//     position: absolute;
+//     left: -.1rem;
+//     top: 4.9rem;
+//     z-index: 10;
+    
+//     // Animation
+//     opacity: 1;
+//     visibility: visible;
+//     transition: all .5s ease-in-out;
+
+//     &--hidden {
+
+//       // Animation
+//       opacity: 0;
+//       visibility: hidden;
+//     }
+//   }
+
+//   &__item ,
+//   &--active {
+
+//     cursor: pointer;
+//     width: 24.8rem;
+//     padding: .4rem;
+
+//     align-content: stretch;
+    
+//     &:hover {
+//       background-color: $color-grey--lightest;
+//       color: $color-grey--dark-2;
+//     }
+
+//     & img {
+//       height: 3.5rem;
+//     }
+
+//     & span {
+//       flex-grow: 1;
+//       align-self: stretch;
+//     }
+
+//     & .dropdown__icon {
+//       font-size: 3.2rem;
+//       color: $color-grey--light-2;
+//       transition: all .3s ease-in-out;
+//       &--rotate {
+//         transform: rotate(90deg);
+//       }
+//     }
+//   }
+//   &--native {
+//     display: none;
+//   }
+// }
+
+
+/////////////////////////////////////
+// Custom Select
+.select {
+  display: inline-block;
+
+  &--custom {
+    position: relative;
+    width: 25rem;
+
+    &__icon {
+      font-size: 3.2rem;
+      color: $color-grey--light-2;
+      transition: all .3s ease-in-out;
+
+      &--rotate {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__img {
+    height: 3.5rem;
+  }
+  
+  &__list {
+    width: 25rem;
+    background-color: $color-white;
+    position: absolute;
+    top: 5.3rem; // 8px below btn (btn height is 45px)
+    left: 0rem;
+    z-index: 10;
+
+    // Animation
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+
+    &--hidden {
+      // Animation
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:focus-visible {
+      // background-color: aquamarine;
+    }
+  } 
+
+  &__item,
+  &__btn  {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    cursor: pointer;
+    padding: .4rem;
+    width: 24.8rem;
+    
+
+    &:hover {
+      background-color: $color-grey--light-4;
+      color: $color-grey--dark-2;
+    }
+
+    & img {
+      height: 3.5rem;
+    }
+
+    & span {
+      flex-grow: 1;
+    }
+  }
+  
+  &__btn {
+    text-align: left;
+    border: none;
+    background-color: $color-white;
+    width: 25rem;
+  }
+
+  &__item {
+    & .select--custom__icon {
+      // Animation
+      opacity: 0;
+      visibility: hidden;
+    }
+    &--active {
+      & .select--custom__icon {
+        // Animation
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease-in-out;
+      }
+    }
+
+    &:focus {
+      background-color: $color-grey--light-4;
+      color: $color-grey--dark-2;
+    }
+  }
+}
+

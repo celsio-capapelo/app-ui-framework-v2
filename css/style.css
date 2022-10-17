@@ -16,7 +16,8 @@ ol {
 
 input,
 textarea,
-select {
+select,
+button {
   font-family: inherit;
   color: inherit;
   font-size: inherit; }
@@ -257,95 +258,6 @@ body {
     .input-group--addon-dropdown select:focus, .input-group--addon-dropdown select:active {
       outline: none; }
 
-.select--container {
-  position: relative; }
-
-.select__list {
-  width: 25rem;
-  margin-bottom: 1.6rem;
-  position: absolute;
-  left: -.1rem;
-  top: 4.9rem;
-  z-index: 10;
-  opacity: 1;
-  visibility: visible;
-  transition: all .5s ease-in-out; }
-  .select__list--hidden {
-    opacity: 0;
-    visibility: hidden; }
-
-.select__item, .select--active {
-  cursor: pointer;
-  width: 24.8rem;
-  padding: .4rem;
-  align-content: stretch; }
-  .select__item:hover, .select--active:hover {
-    background-color: #F5F7FA;
-    color: #3E4C59; }
-  .select__item img, .select--active img {
-    height: 3.5rem; }
-  .select__item span, .select--active span {
-    flex-grow: 1;
-    align-self: stretch; }
-  .select__item .dropdown__icon, .select--active .dropdown__icon {
-    font-size: 3.2rem;
-    color: #9AA5B1;
-    transition: all .3s ease-in-out; }
-    .select__item .dropdown__icon--rotate, .select--active .dropdown__icon--rotate {
-      transform: rotate(90deg); }
-
-.select--native {
-  display: none; }
-
-.container--dropdown {
-  background-color: gold;
-  margin-top: 1.6rem;
-  padding: .8rem;
-  border-radius: .4rem;
-  background-color: #fff; }
-  .container--dropdown > div:not(button:last-child) {
-    margin-bottom: 20rem; }
-  .container--dropdown > div:nth-of-type(2), .container--dropdown > div:nth-of-type(3) {
-    margin-bottom: 30rem !important; }
-  .container--dropdown > div:nth-of-type(3) {
-    margin-bottom: 40rem !important; }
-  .container--dropdown > div p {
-    margin-bottom: 2.4rem; }
-
-.dropdown {
-  display: inline-block;
-  position: relative;
-  width: 20rem;
-  text-align: right; }
-  .dropdown__trigger {
-    display: inline-block;
-    cursor: pointer;
-    padding: .8rem 1.2rem;
-    border-radius: 5px; }
-  .dropdown__content {
-    position: absolute;
-    top: 4.2rem;
-    left: 0;
-    width: 20rem;
-    background-color: #fff;
-    border-radius: 5px; }
-    .dropdown__content--hidden {
-      display: none; }
-  .dropdown__item {
-    text-align: left; }
-    .dropdown__item span {
-      display: inline-block;
-      transform: translateY(-0.55rem);
-      margin-left: .4rem; }
-  .dropdown__link, .dropdown__link:link, .dropdown__link:visited {
-    display: block;
-    padding: .8rem 1.2rem;
-    color: #616E7C;
-    text-decoration: none; }
-  .dropdown__link:hover, .dropdown__link:active {
-    color: #3E4C59;
-    background-color: #F5F7FA; }
-
 .form__group--icon {
   position: relative; }
 
@@ -403,6 +315,62 @@ body {
   .tag--accent-4 {
     background-color: #C6F7E2;
     color: #0C6B58; }
+
+.select {
+  display: inline-block; }
+  .select--custom {
+    position: relative;
+    width: 25rem; }
+    .select--custom__icon {
+      font-size: 3.2rem;
+      color: #9AA5B1;
+      transition: all .3s ease-in-out; }
+      .select--custom__icon--rotate {
+        transform: rotate(-90deg); }
+  .select__img {
+    height: 3.5rem; }
+  .select__list {
+    width: 25rem;
+    background-color: #fff;
+    position: absolute;
+    top: 5.3rem;
+    left: 0rem;
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out; }
+    .select__list--hidden {
+      opacity: 0;
+      visibility: hidden; }
+  .select__item, .select__btn {
+    display: flex;
+    gap: .8rem;
+    align-items: center;
+    cursor: pointer;
+    padding: .4rem;
+    width: 24.8rem; }
+    .select__item:hover, .select__btn:hover {
+      background-color: #E4E7EB;
+      color: #3E4C59; }
+    .select__item img, .select__btn img {
+      height: 3.5rem; }
+    .select__item span, .select__btn span {
+      flex-grow: 1; }
+  .select__btn {
+    text-align: left;
+    border: none;
+    background-color: #fff;
+    width: 25rem; }
+  .select__item .select--custom__icon {
+    opacity: 0;
+    visibility: hidden; }
+  .select__item--active .select--custom__icon {
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out; }
+  .select__item:focus {
+    background-color: #E4E7EB;
+    color: #3E4C59; }
 
 .nav {
   display: flex;
@@ -537,3 +505,6 @@ main {
 .section--radio .form__label {
   display: inline-block;
   margin: 0 4.8rem 0 .8rem; }
+
+.section--select {
+  padding-bottom: 25rem; }

@@ -19,9 +19,6 @@ DESIGN SYSTEM
 - Naming
 // CSS classes
 u- utility
-c- component
-lp- layout page
-p- page
 
 - Colors
 Color palette #10 (Refactoring UI/Color Palettes, page 56)
