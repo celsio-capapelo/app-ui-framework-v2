@@ -116,25 +116,28 @@ selectCollection.forEach(select => {
         });
       }
       // 2) Add class and atribute related to active on clicked item
-      item.classList.add('select__item--active');
-      item.setAttribute('aria-selected', true);
-
-      //3) Update the aria-activedescendant value on the listbox 
+      item.classList.toggle('select__item--active');
+      !!item.parentElement.getAttribute('aria-multiselectable')
+        ? !!item.getAttribute('aria-selected')  ? item.setAttribute('aria-selected', '')  : item.setAttribute('aria-selected', true)
+        : item.setAttribute('aria-selected', true);
+     
+        //3) Update the aria-activedescendant value on the listbox 
       selectList.setAttribute('aria-activedescendant', item.getAttribute('id'))
 
       // 4) Update activeItem and close list
-      
+       
       // Rotate icon when activeIcon is clicked
       const icon = activeItem.querySelector(".select--custom__icon");
-      icon.classList.contains("select--custom__icon--rotate")
-      ? icon.classList.remove("select--custom__icon--rotate")
-      : icon.classList.add("select--custom__icon--rotate");
+      if (!item.parentElement.getAttribute('aria-multiselectable')) {
+        icon.classList.contains("select--custom__icon--rotate")
+        ? icon.classList.remove("select--custom__icon--rotate")
+        : icon.classList.add("select--custom__icon--rotate");
+      }
       
       // Update img and span
       activeItem.querySelector('span').innerText = item.querySelector('span').innerText
       activeItem.querySelector('img').setAttribute('src', item.querySelector('img').getAttribute('src')); 
 
-      // toggleList(); 
       if (!item.parentElement.getAttribute('aria-multiselectable')) closeList();
     });
   });
@@ -142,19 +145,20 @@ selectCollection.forEach(select => {
    // Handle 'Space bar' and 'Enter' press
    itemsCollection.forEach(item => {
     item.onkeydown = (e) => {
-      // console.log(e.target, e.key);
-      // if (e.key !== 'Enter') return;
       if (e.key !== ' ' && e.key !== 'Enter') return;
-      console.log(e.target, e.key);
       // 1) Remove class and atribute related to active on all item
-      itemsCollection.forEach(i => {
-        i.setAttribute('aria-selected', false);
-        i.classList.remove('select__item--active');
-      });
+      if ( !item.parentElement.getAttribute('aria-multiselectable') ) {
+        itemsCollection.forEach(i => {
+          i.setAttribute('aria-selected', false);
+          i.classList.remove('select__item--active');
+        });
+      }
 
       // 2) Add class and atribute related to active on clicked item
-      item.classList.add('select__item--active');
-      item.setAttribute('aria-selected', true);
+      item.classList.toggle('select__item--active');
+      !!item.parentElement.getAttribute('aria-multiselectable')
+        ? !!item.getAttribute('aria-selected')  ? item.setAttribute('aria-selected', '')  : item.setAttribute('aria-selected', true)
+        : item.setAttribute('aria-selected', true);
 
       //3) Update the aria-activedescendant value on the listbox 
       selectList.setAttribute('aria-activedescendant', item.getAttribute('id'))
@@ -163,18 +167,150 @@ selectCollection.forEach(select => {
       
       // Rotate icon when activeIcon is clicked
       const icon = activeItem.querySelector(".select--custom__icon");
-      icon.classList.contains("select--custom__icon--rotate")
-      ? icon.classList.remove("select--custom__icon--rotate")
-      : icon.classList.add("select--custom__icon--rotate");
+      if (!item.parentElement.getAttribute('aria-multiselectable')) 
+        icon.classList.contains("select--custom__icon--rotate") ? icon.classList.remove("select--custom__icon--rotate") : icon.classList.add("select--custom__icon--rotate");
+      
       
       // Update img and span
       activeItem.querySelector('span').innerText = item.querySelector('span').innerText
       activeItem.querySelector('img').setAttribute('src', item.querySelector('img').getAttribute('src')); 
 
-      toggleList(); 
+      if (!item.parentElement.getAttribute('aria-multiselectable')) closeList();
     }
    });
 })
+
+
+// /////////////////////////////////////////////////
+// // Custom Select
+// SINGLE SELECT COMPLETE
+// /////////////////////////////////////////////////
+
+
+// // Selections, variables
+// const selectCollection = document.querySelectorAll('.select--custom');
+
+// // Functions
+
+// selectCollection.forEach(select => {
+//   // Selections, variables
+//   const activeItem = select.querySelector(".select__btn");
+//   const selectList = select.querySelector(".select__list");
+//   let isOpenedList = false;
+//   const activeItemIcon = 
+//     activeItem.querySelector(".select--custom__icon");    
+//   const itemsCollection = select.querySelectorAll('.select__item');
+  
+//   const closeList = () => {
+//     selectList.classList.add("select__list--hidden");
+//     isOpenedList = false;
+//   };
+
+//   const openList = () => {
+//     selectList.classList.remove("select__list--hidden");
+//     isOpenedList = true;
+//   };
+
+//   const toggleList = () =>
+//   isOpenedList ? closeList() : openList();
+
+//   // Event Listeners
+   
+//   // Open or close the list by clicking on active item
+//   activeItem.addEventListener("click", (e) => {
+//     const icon = activeItem.querySelector(".select--custom__icon");
+
+//     // Rotate icon when activeIcon is clicked
+//     icon.classList.contains("select--custom__icon--rotate")
+//       ? icon.classList.remove("select--custom__icon--rotate")
+//       : icon.classList.add("select--custom__icon--rotate");
+
+//       toggleList();
+      
+//   });
+
+//   // Close List clicking outside of select
+//   document.addEventListener("click", (e) => {
+//     const isClickOutsideSelect = !e.target.closest(".select--custom");
+//     if (isClickOutsideSelect && isOpenedList) closeList();
+//   });
+
+//   // // Close List by pressing the ESC key
+//   window.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape" && isOpenedList) closeList();
+//   });
+
+//   // Handle click on items
+//   itemsCollection.forEach(item => {
+//     item.addEventListener('click', (e) => {
+//       console.log(e.target);
+//       // 1) Remove class and atribute related to active on all item
+//       if ( !item.parentElement.getAttribute('aria-multiselectable') ) {
+//         itemsCollection.forEach(i => {
+//           i.setAttribute('aria-selected', false);
+//           i.classList.remove('select__item--active');
+//         });
+//       }
+//       // 2) Add class and atribute related to active on clicked item
+//       item.classList.add('select__item--active');
+//       item.setAttribute('aria-selected', true);
+
+//       //3) Update the aria-activedescendant value on the listbox 
+//       selectList.setAttribute('aria-activedescendant', item.getAttribute('id'))
+
+//       // 4) Update activeItem and close list
+      
+//       // Rotate icon when activeIcon is clicked
+//       const icon = activeItem.querySelector(".select--custom__icon");
+//       icon.classList.contains("select--custom__icon--rotate")
+//       ? icon.classList.remove("select--custom__icon--rotate")
+//       : icon.classList.add("select--custom__icon--rotate");
+      
+//       // Update img and span
+//       activeItem.querySelector('span').innerText = item.querySelector('span').innerText
+//       activeItem.querySelector('img').setAttribute('src', item.querySelector('img').getAttribute('src')); 
+
+//       // toggleList(); 
+//       if (!item.parentElement.getAttribute('aria-multiselectable')) closeList();
+//     });
+//   });
+
+//    // Handle 'Space bar' and 'Enter' press
+//    itemsCollection.forEach(item => {
+//     item.onkeydown = (e) => {
+//       // console.log(e.target, e.key);
+//       // if (e.key !== 'Enter') return;
+//       if (e.key !== ' ' && e.key !== 'Enter') return;
+//       console.log(e.target, e.key);
+//       // 1) Remove class and atribute related to active on all item
+//       itemsCollection.forEach(i => {
+//         i.setAttribute('aria-selected', false);
+//         i.classList.remove('select__item--active');
+//       });
+
+//       // 2) Add class and atribute related to active on clicked item
+//       item.classList.add('select__item--active');
+//       item.setAttribute('aria-selected', true);
+
+//       //3) Update the aria-activedescendant value on the listbox 
+//       selectList.setAttribute('aria-activedescendant', item.getAttribute('id'))
+
+//       // 4) Update activeItem and close list
+      
+//       // Rotate icon when activeIcon is clicked
+//       const icon = activeItem.querySelector(".select--custom__icon");
+//       icon.classList.contains("select--custom__icon--rotate")
+//       ? icon.classList.remove("select--custom__icon--rotate")
+//       : icon.classList.add("select--custom__icon--rotate");
+      
+//       // Update img and span
+//       activeItem.querySelector('span').innerText = item.querySelector('span').innerText
+//       activeItem.querySelector('img').setAttribute('src', item.querySelector('img').getAttribute('src')); 
+
+//       toggleList(); 
+//     }
+//    });
+// })
 
 // /////////////////////////////////////////////////
 // // Select Menus
