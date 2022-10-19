@@ -96,12 +96,28 @@ selectCollection.forEach(select => {
   // Close List clicking outside of select
   document.addEventListener("click", (e) => {
     const isClickOutsideSelect = !e.target.closest(".select--custom");
-    if (isClickOutsideSelect && isOpenedList) closeList();
+    if (isClickOutsideSelect && isOpenedList) {
+      closeList();
+      
+      // Rotate icon on activeIcon
+      const icon = activeItem.querySelector(".select--custom__icon");
+      icon.classList.contains("select--custom__icon--rotate")
+        ? icon.classList.remove("select--custom__icon--rotate")
+        : icon.classList.add("select--custom__icon--rotate");
+      };
   });
 
   // // Close List by pressing the ESC key
   window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && isOpenedList) closeList();
+    if (e.key === "Escape" && isOpenedList) {
+      closeList();
+
+      // Rotate icon on activeIcon
+      const icon = activeItem.querySelector(".select--custom__icon");
+      icon.classList.contains("select--custom__icon--rotate") 
+        ? icon.classList.remove("select--custom__icon--rotate")
+        : icon.classList.add("select--custom__icon--rotate");
+      }
   });
 
   // Handle click on items

@@ -508,3 +508,6 @@ main {
 
 .section--select {
   padding-bottom: 25rem; }
+  .section--select p {
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem; }
