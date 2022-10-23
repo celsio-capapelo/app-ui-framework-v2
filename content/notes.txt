@@ -19,6 +19,7 @@ DESIGN SYSTEM
 - Naming
 // CSS classes
 u- utility
+c- component
 
 - Colors
 Color palette #10 (Refactoring UI/Color Palettes, page 56)
@@ -28,7 +29,7 @@ PROJECT MANIFEST
 - Goal: Build a reusable HTML&CSS framework
 - Todo List
   Elements (#): Input, textbox, button, select, radio, tag
-  Components (#): custom select, dropdown, tables, forms, custom radio, card, modal, tab, pagination, breadcrumbs, 
+  Components (#): custom select, dropdown, tab , pagination, breadcrumbs, 
   Layouts (#): navbar, sidebar, footer, app-layout
   Utilities (*): border, hd, vd, border-radius, round, container
 

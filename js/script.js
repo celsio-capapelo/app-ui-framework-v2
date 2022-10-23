@@ -7,10 +7,12 @@ const state = {
 const dropdownCollection = document.querySelectorAll('.dropdown');
 
 dropdownCollection.forEach(dropdown => {
+  let dropdownIsOpened = false;
   const dropdownTrigger = dropdown.querySelector(".dropdown__trigger");
   const dropdownContent = dropdown.querySelector(".dropdown__content");
-  let dropdownIsOpened = false;
   const dropdownTriggerIcon = dropdownTrigger.querySelector(".dropdown__icon");
+
+  // Functions
   const toggleDropdownIcon = () => {
     if (dropdownTriggerIcon.classList.contains("la-angle-right"))
       dropdownTriggerIcon.classList.replace("la-angle-right", "la-angle-down");
@@ -28,11 +30,21 @@ dropdownCollection.forEach(dropdown => {
     dropdownContent.classList.remove("dropdown__content--hidden");
     toggleDropdownIcon();
     dropdownIsOpened = true;
+    
   };
 
   const toggleDropdown = () =>
     dropdownIsOpened ? closeDropdown() : openDropdown();
 
+  const highlight = (item) => {
+    item.classList.add('dropdown__item--highlighted');
+  }
+
+  const removeHighlight = (item) => {
+    item.classList.remove('dropdown__item--highlighted');
+  }
+  
+  // Event Listeners
   // Open or close dropdown clicking on dropdownTrigger
   dropdownTrigger.addEventListener("click", toggleDropdown);
 
@@ -195,6 +207,42 @@ selectCollection.forEach(select => {
     }
    });
 })
+
+/////////////////////////////////////////////////
+// Tab
+const tabsContainer = document.querySelector('.tab-component__tab-container');
+const tabsContent = document.querySelectorAll('.tab-component__content');
+const tabs= document.querySelectorAll('.tab-component__tab');
+
+tabsContainer.addEventListener('click', e => {
+  if (!e.target.dataset.tab) return;
+
+  // Clear all tabs
+  tabsContent.forEach(c => c.style.display = 'none');
+  tabs.forEach(t => t.classList.remove('tab-component__tab--active'));
+
+  // Active tab
+  const content = document.querySelector(`.tab-component__content--${e.target.dataset.tab}`);
+  const tab = document.querySelector(`.tab-component__tab--${e.target.dataset.tab}`);
+  content.style.display = 'grid';
+  tab.classList.add('tab-component__tab--active');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // /////////////////////////////////////////////////

@@ -29,15 +29,15 @@
   display: inline-block;
   position: relative;
   width: 20rem;
-  text-align: right;
+  // Control dropdown trigger horizontal alignment
+  text-align: left;
 
   &__trigger {
     display: inline-block;
-    // border: 1px dotted red;
     cursor: pointer;
-    // background-color: aqua;
     padding: .8rem 1.2rem;
     border-radius: 5px;
+    
   }
 
   &__content {
@@ -55,6 +55,11 @@
 
   &__item {
     text-align: left;
+
+    &--highlighted {
+      color: $color-grey--dark-2;
+      background-color: $color-grey--lightest;
+    }
     &:nth-last-child(odd) {
       // background-color: gold;
     }

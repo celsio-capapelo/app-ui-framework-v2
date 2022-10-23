@@ -195,130 +195,219 @@
       </section>
       <!-- Custom select END -->
 
-    <!-- Custom select START -->
-    <section class="section section--select">
+    <!-- Dropdown START -->
+    <section class="section section--dropdown">
       <div class="u-container u-border">
         <div>
-          <span class="subheading">Custom Select</span>
+          <span class="subheading">Dropdown</span>
           <h2 class="heading--2"></h2>
         </div>
         <div>
-          <div class="select select--custom">
-            <button class="select__btn u-border" aria-haspopup="true">
-              <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-              <span class="">Taylor Otwell</span>
-              <i class="select--custom__icon las la-angle-down"></i>
-            </button>
-            <ul class="select__list select__list--hidden u-border" role="listbox" 
-              aria-activedescendant="taylor-otwell" 
-              aria-label="List of mentors to choose" >
-              <li class="select__item select__item--active" role="option" aria-selected="true" 
-                id="taylor-otwell" tabindex="0">
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Taylor Otwell</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option" aria-selected="false"  
-                id="eric-elliott" tabindex="0">
-                <img class="select__img u-circle" src="images/person-2.jpg" alt="Item image">  
-                <span class="">Eric Elliott</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option" aria-selected="false" 
-                id="jeffrey-way" tabindex="0">
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Jeffrey Way</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option" aria-selected="false" 
-                id="jeffrey-biles" tabindex="0">
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Jeffrey Biles</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-            </ul>
+          <div>
+            <p>Dropdown (Require JS)</p>
+            <div class="dropdown">
+              <div class="dropdown__trigger u-border" tabindex="0">
+                <span class="dropdown__text">Options</span>
+                <i class="dropdown__icon las la-angle-right"></i>
+              </div>
+              <div class="dropdown__content dropdown__content--hidden  u-border" method="" action="#">
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Account settings</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Support</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">License</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Sign out</a></div>
+              </div>
+            </div>
           </div>
-          <div class="select select--custom">
-            <button class="select__btn u-border" aria-haspopup="true">
-              <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-              <span class="">Jonas Schemedtman</span>
-              <i class="select--custom__icon las la-angle-down"></i>
-            </button>
-            <ul class="select__list select__list--hidden u-border" role="listbox" 
-              aria-activedescendant="jonas-schmedtman" 
-              aria-label="List of mentors to choose"
-              aria-multiselectable="true" >
-              <li class="select__item select__item--active" role="option" aria-selected="true" id="jonas-schmedtman"
-                tabindex="0" >
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Jonas Schemedtman</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option"  id="andrew-mead" aria-selected=""
-                tabindex="0" >
-                <img class="select__img u-circle" src="images/person-2.jpg" alt="Item image">  
-                <span class="">Andrew Mead</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option" id="erik-kennedy"  aria-selected=""
-                tabindex="0" >
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Erik Kennedy</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-              <li class="select__item" role="option" id="steve-schogger"  aria-selected=""
-                tabindex="0" >
-                <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-                <span class="">Steve Schogger</span>
-                <i class="select--custom__icon las la-check"></i>
-              </li>
-            </ul>
+          <div>
+            <p>Dropdown with dividers (Require JS)</p>
+            <div class="dropdown">
+              <div class="dropdown__trigger u-border" tabindex="0">
+                <span class="dropdown__text">Options</span>
+                <i class="dropdown__icon las la-angle-right"></i>
+              </div>
+              <div class="dropdown__content dropdown__content--hidden  u-border" method="" action="#" >
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Edit</a></div>
+                <div class="dropdown__item u-hr"><a class="dropdown__link" href="#" tabindex="-1">Duplicate</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Archive</a></div>
+                <div class="dropdown__item u-hr"><a class="dropdown__link" href="#" tabindex="-1">Move</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Share</a></div>
+                <div class="dropdown__item u-hr"><a class="dropdown__link" href="#" tabindex="-1">Add to favorites</a></div>
+                <div class="dropdown__item"><a class="dropdown__link" href="#" tabindex="-1">Delete</a></div>
+              </div>
+            </div>
           </div>
 
-          <!-- Custom select mockup -->
-          
-        <!-- <div class="select select--custom">
-          <button class="select__btn u-border" aria-haspopup="true">
-            <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-            <span class="">Taylor Otwell</span>
-            <i class="select--custom__icon las la-angle-down"></i>
-          </button>
-          <ul class="select__list select__list--hidden u-border" role="listbox" 
-            aria-activedescendant="taylor-otwell" 
-            aria-label="List of mentors to choose" >
-            <li class="select__item select__item--active" role="option" aria-selected="true" 
-              id="taylor-otwell" tabindex="0">
-              <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-              <span class="">Taylor Otwell</span>
-              <i class="select--custom__icon las la-check"></i>
-            </li>
-            <li class="select__item" role="option" aria-selected="false"  
-              id="eric-elliott" tabindex="0">
-              <img class="select__img u-circle" src="images/person-2.jpg" alt="Item image">  
-              <span class="">Eric Elliott</span>
-              <i class="select--custom__icon las la-check"></i>
-            </li>
-            <li class="select__item" role="option" aria-selected="false" 
-              id="jeffrey-way" tabindex="0">
-              <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-              <span class="">Jeffrey Way</span>
-              <i class="select--custom__icon las la-check"></i>
-            </li>
-            <li class="select__item" role="option" aria-selected="false" 
-              id="jeffrey-biles" tabindex="0">
-              <img class="select__img u-circle" src="images/profile.png" alt="Item image">  
-              <span class="">Jeffrey Biles</span>
-              <i class="select--custom__icon las la-check"></i>
-            </li>
-          </ul>
-        </div> 
-      -->
+          <!-- Dropdown Mockup START 
+            <div>
+              <p>Dropdown (Require JS)</p>
+              <div class="dropdown">
+                <div class="dropdown__trigger u-border">
+                  <span class="dropdown__text">Options</span>
+                  <i class="dropdown__icon las la-angle-right"></i>
+                </div>
+                <div class="dropdown__content  u-border" method="" action="#">
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Account settings</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Support</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">License</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Sign out</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p>Dropdown with dividers (Require JS)</p>
+              <div class="dropdown">
+                <div class="dropdown__trigger u-border">
+                  <span class="dropdown__text">Options</span>
+                  <i class="dropdown__icon las la-angle-right"></i>
+                </div>
+                <div class="dropdown__content  u-border" method="" action="#">
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Edit</a></div>
+                  <div class="dropdown__item u-hr"><a class="dropdown__link" href="#">Duplicate</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Archive</a></div>
+                  <div class="dropdown__item u-hr"><a class="dropdown__link" href="#">Move</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Share</a></div>
+                  <div class="dropdown__item u-hr"><a class="dropdown__link" href="#">Add to favorites</a></div>
+                  <div class="dropdown__item"><a class="dropdown__link" href="#">Delete</a></div>
+                </div>
+              </div>
+            </div>
+           Dropdown Mockup END-->
           
       </div>
     </section>
-    <!-- Custom select END -->
+    <!-- Dropdown END -->
 
+    <!-- Tab START -->
+    <section class="section section--tab">
+      <div class="u-container u-border">
+        <div>
+          <span class="subheading">Tab</span>
+          <h2 class="heading--2"></h2>
+        </div>
+        <div>
+          <div>
+            <p>Tab</p>
+            <div class="tab-component">
+              <div class="tab-component__tab-container">
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--1  tab-component__tab--active btn" data-tab="1">Cereais e tubérculos</span>
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--2 btn" data-tab="2">leguminosas secas, carne, peixe</span>
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--3 btn" data-tab="3">frutas e hortaliças</span>
+              </div>
+              <div>
+                <div>
+                  <div class="tab-component__content tab-component__content--1">
+                    <div>
+                      <h3 class="tab-component__title">Cereais e tubérculos</h3>
+                      <p class="tab-component__description text">O primeiro é composto de cereais como milho, trigo, arroz, aveia, 
+                        centeio, cevada e painço. Estão incluídos nesse grupo também os tubérculos
+                        como batata e inhame. São carboidratos energéticos.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-1.jpg" alt="Imagem de cereais e tubérculos 1">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-2.jpg" alt="Imagem de cereais e tubérculos 2">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-3.jpg" alt="Imagem de cereais e tubérculos 3">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-4.jpg" alt="Imagem de cereais e tubérculos 4">
+                    </div>
+                  </div>
+                  <div class="tab-component__content tab-component__content--2">
+                    <div>
+                      <h3 class="tab-component__title">Leguminosas secas, carnes, peixes</h3>
+                      <p class="tab-component__description text">No segundo grupo estão classificadas as leguminosas secas como feijão, 
+                        soja, lentilha, grão-de-bico e fava. Estão incluídos também os alimentos
+                        de origem animal como carne, peixe, ovos, leite e laticínios — ricas
+                          fontes de proteína, ferro, zinco e várias vitaminas.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-1.jpg" alt="Imagem de leguminosas secas carnes e peixes 1">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-2.jpg" alt="Imagem de leguminosas secas carnes e peixes 2">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-3.jpg" alt="Imagem de leguminosas secas carnes e peixes 3">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-4.jpg" alt="Imagem de leguminosas secas carnes e peixes 4">
+                    </div>
+                  </div>
+                  <div class="tab-component__content tab-component__content--3">
+                    <div>
+                      <h3 class="tab-component__title">Frutas e hortaliças</h3>
+                      <p class="tab-component__description text">O terceiro grupo é composto de frutas e de hortaliças 
+                        com alto teor de vitaminas e de sais minerais essenciais para o organismo. 
+                        São energéticas, suprem fibras à dieta e representam a única fonte natural de vitamina C.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-1.jpeg" alt="Imagem de frutas e hortaliças 1">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-2.jpg" alt="Imagem de frutas e hortaliças 2">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-3.jpg" alt="Imagem de frutas e hortaliças 3">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-4.jpg" alt="Imagem de frutas e hortaliças 4">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Tab Mockup START 
+            <div class="tab-component">
+              <div class="tab-component__tab-container">
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--1  tab-component__tab--active btn" data-tab="1">Cereais e tubérculos</span>
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--2 btn" data-tab="2">leguminosas secas, carne, peixe</span>
+                <span role="button" tabindex="0" class="tab-component__tab tab-component__tab--3 btn" data-tab="3">frutas e hortaliças</span>
+              </div>
+              <div>
+                <div>
+                  <div class="tab-component__content tab-component__content--1">
+                    <div>
+                      <h3 class="tab-component__title">Cereais e tubérculos</h3>
+                      <p class="tab-component__description text">O primeiro é composto de cereais como milho, trigo, arroz, aveia, 
+                        centeio, cevada e painço. Estão incluídos nesse grupo também os tubérculos
+                        como batata e inhame. São carboidratos energéticos.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-1.jpg" alt="Imagem de cereais e tubérculos 1">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-2.jpg" alt="Imagem de cereais e tubérculos 2">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-3.jpg" alt="Imagem de cereais e tubérculos 3">
+                      <img class="tab-component__img" src="images/cereais-tuberculos-4.jpg" alt="Imagem de cereais e tubérculos 4">
+                    </div>
+                  </div>
+                  <div class="tab-component__content tab-component__content--2">
+                    <div>
+                      <h3 class="tab-component__title">Leguminosas secas, carnes, peixes</h3>
+                      <p class="tab-component__description text">No segundo grupo estão classificadas as leguminosas secas como feijão, 
+                        soja, lentilha, grão-de-bico e fava. Estão incluídos também os alimentos
+                        de origem animal como carne, peixe, ovos, leite e laticínios — ricas
+                          fontes de proteína, ferro, zinco e várias vitaminas.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-1.jpg" alt="Imagem de leguminosas secas carnes e peixes 1">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-2.jpg" alt="Imagem de leguminosas secas carnes e peixes 2">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-3.jpg" alt="Imagem de leguminosas secas carnes e peixes 3">
+                      <img class="tab-component__img" src="images/leguminosas_secas-carne-peixe-4.jpg" alt="Imagem de leguminosas secas carnes e peixes 4">
+                    </div>
+                  </div>
+                  <div class="tab-component__content tab-component__content--3">
+                    <div>
+                      <h3 class="tab-component__title">Frutas e hortaliças</h3>
+                      <p class="tab-component__description text">O terceiro grupo é composto de frutas e de hortaliças 
+                        com alto teor de vitaminas e de sais minerais essenciais para o organismo. 
+                        São energéticas, suprem fibras à dieta e representam a única fonte natural de vitamina C.</p>
+                    </div>
+                    <div class="tab-component__img-container">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-1.jpeg" alt="Imagem de frutas e hortaliças 1">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-2.jpg" alt="Imagem de frutas e hortaliças 2">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-3.jpg" alt="Imagem de frutas e hortaliças 3">
+                      <img class="tab-component__img" src="images/frutas-hortalicas-4.jpg" alt="Imagem de frutas e hortaliças 4">
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>  
+          Tab Mockup END-->
+          
+      </div>
+    </section>
+    <!-- Tab END -->
     </main>
     <!-- Main content END -->
+    
 </body>
 </html>
+
+
