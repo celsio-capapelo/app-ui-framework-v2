@@ -29,7 +29,7 @@ PROJECT MANIFEST
 - Goal: Build a reusable HTML&CSS framework
 - Todo List
   Elements (#): Input, textbox, button, select, radio, tag
-  Components (#): custom select, dropdown, tab , pagination, breadcrumbs, 
+  Components (#): custom select, dropdown, tab , pagination, breadcrumbs, table, forms
   Layouts (#): navbar, sidebar, footer, app-layout
   Utilities (*): border, hd, vd, border-radius, round, container
 

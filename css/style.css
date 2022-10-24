@@ -220,6 +220,18 @@ body {
   .btn--trail-i > span {
     display: inline-block;
     margin-left: .4rem; }
+  .btn--link {
+    background-color: inherit;
+    border: 1px solid transparent; }
+    .btn--link:hover {
+      border: 1px solid rgba(154, 165, 177, 0.5);
+      cursor: pointer; }
+  .btn--pagination-previus, .btn--pagination-next {
+    color: #4C63B6;
+    border: 1px solid transparent; }
+    .btn--pagination-previus:hover, .btn--pagination-next:hover {
+      background-color: #E0E8F9;
+      border: 1px solid #E0E8F9; }
 
 .input--search {
   position: relative; }
@@ -471,6 +483,10 @@ body {
   .tab-component__img {
     height: 15rem; }
 
+.pagination {
+  background-color: #FFFBEA;
+  padding: 3.2rem; }
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -604,6 +620,13 @@ main {
 .section--radio .form__label {
   display: inline-block;
   margin: 0 4.8rem 0 .8rem; }
+
+.section p {
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem; }
+
+.section--btn > div {
+  background-color: #FFFBEA; }
 
 .section--select p {
   margin-bottom: 1.6rem;

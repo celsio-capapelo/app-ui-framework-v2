@@ -228,7 +228,34 @@ tabsContainer.addEventListener('click', e => {
   tab.classList.add('tab-component__tab--active');
 });
 
+/////////////////////////////////////////////////
+// Pagination
+const pagination = document.querySelector('.pagination');
+const btns = document.querySelectorAll('.pagination__btn');
 
+pagination.addEventListener('click', e => {
+  const btn = e.target.closest('.pagination__btn');
+  
+  if (!btn) return; 
+
+  // Temporary (Missing previus/netx btn click handle)
+  if ( btn.classList.contains('pagination__btn--previus') 
+    || btn.classList.contains('pagination__btn--next')
+    || btn.classList.contains('pagination__btn--dots') ) return;
+  
+  const links = [...btns];
+  links.shift();
+  links.pop();
+  links.splice(2, 1);
+
+  links.forEach(b => {
+    b.classList.remove('btn--primary');
+    b.classList.add('btn--link');
+  });
+  e.target.closest('.pagination__btn').classList.add('btn--primary');
+  e.target.closest('.pagination__btn').classList.remove('btn--link');
+
+});
 
 
 

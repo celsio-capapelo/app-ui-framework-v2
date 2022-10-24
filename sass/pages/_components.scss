@@ -1,4 +1,15 @@
 .section {
+  & p {
+    margin-bottom: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  &--btn {
+    & > div {
+      background-color: $color-accent-3--lightest;
+    }
+  }
+
   &--select {
     // padding-bottom: 25rem;
 
@@ -28,6 +39,10 @@
       margin-bottom: 1.6rem;
       font-size: 1.4rem;
     }
+  }
+
+  &--pagination {
+    
   }
 }
 
