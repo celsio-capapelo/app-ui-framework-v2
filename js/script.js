@@ -243,18 +243,19 @@ pagination.addEventListener('click', e => {
     || btn.classList.contains('pagination__btn--next')
     || btn.classList.contains('pagination__btn--dots') ) return;
   
+  // Handling click on button
   const links = [...btns];
-  links.shift();
-  links.pop();
-  links.splice(2, 1);
+  
+  const filterLinks = links.filter(l => 
+     l !== links[0] || l !== links[links.length - 1] || l !== links[2]
+  );
 
-  links.forEach(b => {
+  filterLinks.forEach(b => {
     b.classList.remove('btn--primary');
     b.classList.add('btn--link');
   });
   e.target.closest('.pagination__btn').classList.add('btn--primary');
   e.target.closest('.pagination__btn').classList.remove('btn--link');
-
 });
 
 

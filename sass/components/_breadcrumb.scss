@@ -1,0 +1,26 @@
+.breadcrumb {
+  display: flex;
+  gap: 1.2rem;
+  background-color: $color-accent-4--lightest;
+  padding: 1.6rem 2.4rem;
+  color: $color-primary;
+
+  &__item {
+    cursor: pointer;
+    &:not(:last-child)::after {
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-solid);
+      content: "\f054";
+    }
+    &:last-child {
+      color: $color-accent-4--dark-3;
+    }
+
+    & span {
+      display: inline-block;
+      margin-right: 1.2rem;
+    }
+  }
+}

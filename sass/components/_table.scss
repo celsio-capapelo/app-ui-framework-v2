@@ -1,0 +1,130 @@
+.table {
+  border-collapse: collapse;
+  text-align: left;
+
+  &__head {
+    & .table__th {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+ 
+  th,
+  td {
+    border: 1px solid rgba($color-grey--light-2, .2);
+    padding: .8rem 1.6rem;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    border-collapse: collapse;
+  }
+
+  &__img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  & .plan {
+    // width: max-content;
+    text-align: center;
+
+    &__name {
+      display: block;
+      font-size: 2rem;
+      color: $color-grey--dark-1;
+      margin-bottom: 2.4rem;
+    }
+
+    &__target.plan__for {
+      display: block;
+      font-size: 1.2rem;
+      color: $color-grey--light-1;
+      margin-bottom: 2.4rem;
+    }
+
+    & .plan__cta {
+      margin-bottom: .8rem;
+    }
+    
+    & > * {
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+
+    &__features {
+      font-size: 2rem;
+      color: $color-grey--dark-1;
+      // text-align: left;
+    }
+  }
+
+  &--b {
+    & .table__head .table__row:first-child {
+      text-align: center;
+    }
+
+    & .table__row:nth-child(3) td {
+      text-transform: uppercase;
+    }
+
+    & .table__row:nth-child(3) td {
+      text-transform: uppercase;
+
+      &:first-child,
+      &:last-child {
+        text-transform: lowercase;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    & .table__row td:first-child {
+      text-align: left;
+
+      & div {
+        display: inline-block;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.4rem;
+      }
+    }
+
+    & .table__row:nth-child(4) td {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    & i {
+      color: $color-primary;
+      font-size: 3.2rem;
+
+      &[class*="la-info-circle"] {
+        color: $color-grey;
+        color: $color-grey--light-2;
+      } 
+    }
+    & .table__th {
+      font-weight: 400;
+      text-transform: capitalize;
+
+      &:first-child {
+        border: none;
+      }
+    }
+  }
+
+
+}
