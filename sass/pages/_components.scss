@@ -45,10 +45,23 @@
     
   }
   &--table {
-    & > .u-container.u-border.section__header > div {
-      display: block;
-      margin-bottom: 6.4rem;
+    & > .u-container.u-border.section__header {
+      & .table {
+        background-color: #fff;
+        margin: 3.2rem !important;
+      }
+      & > div {
+        display: block;
+        margin-bottom: 6.4rem;
+      }
     }
+  }
+
+  &--form {
+
+    .u-container > div:not(:first-child) {
+      display: block;
+  }
   }
 }
 

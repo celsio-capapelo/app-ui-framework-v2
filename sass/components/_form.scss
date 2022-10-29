@@ -50,4 +50,11 @@
       background-color: $color-accent-1;
     }
   }
+
+  [class^="col-"] {
+    .form__input,
+    .form__select {
+      width: 100%;
+    }
+  }
 }
