@@ -23,4 +23,13 @@
       margin-right: 1.2rem;
     }
   }
+
+  &:nth-child(3) {
+    .breadcrumb__item span:not(:last-child)::after {
+      content: "" !important;
+      display: block !important;
+      height: 100% !important;
+      border-left: 1px solid rgba($color-grey--light-2, .25) !important;
+    }
+  }
 }

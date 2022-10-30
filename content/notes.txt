@@ -30,8 +30,8 @@ PROJECT MANIFEST
 - Todo List
   Elements (#): Input, textbox, button, select, radio, tag
   Components (#): custom select, dropdown, tab , pagination, breadcrumbs, table, forms
-  Layouts (#): navbar, sidebar, footer, app-layout
-  Utilities (*): border, hd, vd, border-radius, round, container
+  Utilities (*): border, hd(horizontal divider), vd(vertical divider), border-radius, round, container
+  Layouts (#): app-layout, navbar footer, sidebar
 
   (*) one utility 
   (#) one base, 1-2 variations 

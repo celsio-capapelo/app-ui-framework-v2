@@ -1,3 +1,7 @@
+.u-border {
+  border: 1px solid rgba($color-grey--light-2, .5) !important;
+}
+
 .u-container {
   margin-inline: 1.6rem !important;
 }
@@ -6,9 +10,6 @@
   border-radius: 1000rem !important;
 }
 
-.u-border {
-  border: 1px solid rgba($color-grey--light-2, .5) !important;
-}
 
 .u-hr::after {
   content: "" !important;
@@ -17,9 +18,21 @@
   height: 1px !important;
 }
 
+.u-vr::after {
+  content: "" !important;
+  display: inline-block !important;
+  height: 100% !important;
+  border-left: 1px solid rgba($color-grey--light-2, .35) !important;
+  margin-left: 1rem;
+}
+
 .u-space-between {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between;
+}
+
+.horizontal-divider {
+  height: 2rem;
 }
 
