@@ -1,7 +1,7 @@
 {
-  "name": "APP UI Framework",
+  "name": "V8_CRM MOCK_UI",
   "version": "2.0.0",
-  "description": "Reusable App UI Framework",
+  "description": "V8 CRM MOCK UI",
   "main": "index.html",
   "scripts": {
     "compile:sass": "node-sass sass/style.scss css/style.css -w"

@@ -18,6 +18,10 @@
     font-size: 3.2rem;
   }
 
+  &__icon--s {
+    font-size: 1.6rem;
+  }
+
   &--fluid {
     display: grid;
     grid-template-columns: max-content 1fr;

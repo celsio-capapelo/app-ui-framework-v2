@@ -74,3 +74,10 @@ $color-accent-4--lightest: #EFFCF6;
 $grid-width: 114rem;
 $grid-gutter-vertical: 3rem;
 $grid-gutter-horizontal: 2rem;
+
+// Elevation
+$elevation--smallest: 0 1px 3px hsla(0, 0%, 0%, .2);
+$elevation--small-1: 0 4px 6px hsla(0, 0%, 0%, .2);
+$elevation: 0 5px 15px hsla(0, 0%, 0%, .2);
+$elevation--high-1: 0 10px 24px hsla(0, 0%, 0%, .2);
+$elevation--highest: 0 15px 35px hsla(0, 0%, 0%, .2);
